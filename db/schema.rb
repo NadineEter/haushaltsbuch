@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20140114143530) do
     t.string   "comment"
     t.integer  "account_id"
     t.boolean  "income"
+    t.boolean  "expense"
     t.integer  "category_id"
     t.datetime "created_at"
     t.datetime "updated_at"

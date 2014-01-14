@@ -6,6 +6,7 @@ class CreateTransactions < ActiveRecord::Migration
       t.string :comment
       t.integer :account_id
       t.boolean :income
+      t.boolean :expense
       t.integer :category_id
 
       t.timestamps
