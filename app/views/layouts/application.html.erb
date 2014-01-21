@@ -1,7 +1,3 @@
-
-
-
-
 <html>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,6 +14,14 @@
   <%= render 'layouts/messages' %>
   <%= yield %>
   </div>
+
+</div>
+<%= render 'layouts/navigation' %>
+
+<div class="container">
+  <%= render 'layouts/messages' %>
+    <%= yield %>
+</div> <!-- /container -->
 
 </body>
 </html>
