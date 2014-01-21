@@ -21,7 +21,7 @@ class TransactionsControllerTest < ActionController::TestCase
       post :create, transaction: { account_id: @transaction.account_id, amount: @transaction.amount, category_id: @transaction.category_id, comment: @transaction.comment, date: @transaction.date, income: @transaction.income }
     end
 
-    assert_redirected_to transaction_path(assigns(:transaction))
+    assert_redirected_to transaction_url
   end
 
   test "should show transaction" do

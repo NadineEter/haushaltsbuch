@@ -1,4 +1,5 @@
 class TransactionsController < ApplicationController
+  before_action :authenticate_user!, except: [:index]
   before_action :set_transaction, only: [:show, :edit, :update, :destroy]
 
   # GET /transactions
@@ -24,7 +25,7 @@ class TransactionsController < ApplicationController
   # POST /transactions
   # POST /transactions.json
   def create
-    @transaction = Transaction.new(transaction_params)
+    @transaction = current_user.transactions.new(transaction_params)
 
     respond_to do |format|
       if @transaction.save
@@ -65,6 +66,9 @@ class TransactionsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_transaction
       @transaction = Transaction.find(params[:id])
+      if @transaction.user_id != current_user.id
+  redirect_to transactions_url, alert: 'You can edit only your own Transaction.'
+end
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
