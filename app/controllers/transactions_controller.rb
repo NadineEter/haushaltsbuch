@@ -5,8 +5,13 @@ class TransactionsController < ApplicationController
   # GET /transactions
   # GET /transactions.json
   def index
-    @transactions = Transaction.all
+
+      @expense = Transaction.where(income: false).order(date: :desc)
+      @income = Transaction.where(income: true).order(date: :desc)
+ 
   end
+
+
 
   # GET /transactions/1
   # GET /transactions/1.json
