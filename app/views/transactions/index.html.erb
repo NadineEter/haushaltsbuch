@@ -1,13 +1,12 @@
+<div id="tabelle">
 
-<br>
-<br>
-<br>
 <h2>Einnahmen</h2>
+<!-- linkas i lentele, i kuria iraso musu  duomenis-->
 <%= render partial: "table", locals: {transactions: @income} %>
 
 
 
-<%= link_to 'New Transaction', new_transaction_path %>
+<%= link_to 'New Transaction', new_transaction_path, class: "btn btn-success btn-sm" %>
 <br>
 
 <h2>Ausgaben</h2>
@@ -16,5 +15,7 @@
 
 
 
-<%= link_to 'New Transaction', new_transaction_path %>
+<%= link_to 'New Transaction', new_transaction_path, class: "btn btn-success btn-sm" %>
 <br>
+
+</div>

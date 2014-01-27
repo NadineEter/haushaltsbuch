@@ -1,11 +1,22 @@
 Haushaltsbuch::Application.routes.draw do
-  devise_for :users
-  resources :transactions
+
+   devise_for :users
+resources :transactions
+root :to =>"transactions#index"
+
+  get "transactions/welcome"
+  get "transactions/edit"
+  get "transactions/index"
+  get "transactions/show"
+
+  
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
+  #root 'transaction#index'
   # root 'welcome#index'
 
   # Example of regular route:

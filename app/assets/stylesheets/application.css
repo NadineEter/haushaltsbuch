@@ -14,7 +14,145 @@
  *= require_self
  *= require_tree .
  */
+ 
+ 
+
+
+/*body {
+	background-color:#D8EDE6;
+
+  padding-top: 60px;
+}*/
+
+/* Created by http://freehtml5templates.com */
+
+/* reset */
+* {
+margin: 0;
+padding: 0;
+}
+
+/* render html5 elements as block */
+header, footer, section, aside, nav, article {
+display: block;
+}
 
 body {
-  padding-top: 60px;
+line-height: 1;
+background: #BBCFE8;
+font-family: Verdana, Arial, Helvetica, sans-serif;
+color: #333;
+font-size: 14px;
+line-height: 18px;
+
 }
+
+#wrapper {
+width: 946px;
+margin: 0 auto;
+margin-top: 20px;
+margin-bottom: 20px;
+border: 3px solid #888;
+background: #fff;
+}
+
+#main {
+
+width: 8000px;
+margin: 0 auto;
+margin-top: 20px;
+margin-bottom: 20px;
+
+background: #fff;
+
+
+
+	
+}
+
+/* nav */
+
+nav {
+width: 940px;
+height: 50px;
+margin: 0 auto;
+margin-top: -5px;
+background: #3B3B38;
+}
+
+
+
+
+nav .navbar-header{
+color: #999998;
+font-size: 16px;
+font-weight: bold;
+}
+nav .navbar-right  {
+margin: 0;
+padding: 17 0 0 20px;
+list-style: none;
+line-height: normal;
+}
+nav .navbar-header a{
+color: #ccc;
+}
+
+nav .navbar-right a{
+color: #ccc;
+}
+
+nav .navbar-right li  {
+display: inline; 
+padding: 20px; 
+}
+header {
+padding: 0px 0 0 0;
+}
+
+/** HEADER */
+
+h2{
+padding-top: 50px;
+padding-bottom: 50px;
+text-align: center
+}
+
+
+#tabelle {
+	width: 600px;
+margin-left: auto;
+ margin-right: auto; 
+ margin-bottom:100px;
+}
+
+
+
+#main {
+width: 940px;
+margin: 0 auto;
+padding-top: 30px;
+background: #FFF url(/assets/colbg.png) repeat-y;
+overflow: hidden;
+}
+
+
+footer {
+width: 940px;
+margin: 0 auto;
+clear: both;
+border: 3px solid #888;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+

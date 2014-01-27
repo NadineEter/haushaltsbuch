@@ -1,0 +1,129 @@
+Searching 160 files for "sign up"
+
+C:\Sites\haushaltsbuch\app\views\devise\registrations\new.html.erb:
+    1: <h2>Sign up</h2>
+    2  
+    3  
+    .
+   19    <%= f.password_field :password_confirmation %></div>
+   20  
+   21:   <div><%= f.submit "Sign up" %></div>
+   22  <% end %>
+   23  
+
+C:\Sites\haushaltsbuch\app\views\devise\shared\_links.erb:
+    4  
+    5  <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
+    6:   <%= link_to "Sign up", new_registration_path(resource_name) %><br />
+    7  <% end -%>
+    8  
+
+C:\Sites\haushaltsbuch\app\views\layouts\_navigation.html.erb:
+   20    <li><%= link_to 'Login', new_user_session_path %></li>
+   21  
+   22:   <li><%= link_to 'Sign up', new_user_registration_path %></li>
+   23  
+   24  <% end %>
+
+C:\Sites\haushaltsbuch\config\initializers\devise.rb:
+   82    # By default, Devise cleans up the CSRF token on authentication to
+   83    # avoid CSRF token fixation attacks. This means that, when using AJAX
+   84:   # requests for sign in and sign up, you need to get a new CSRF token
+   85    # from the server. You can disable this option at your own risk.
+   86    # config.clean_up_csrf_token_on_authentication = true
+
+C:\Sites\haushaltsbuch\config\locales\devise.en.yml:
+   15        not_found_in_database: "Invalid email or password."
+   16        timeout: "Your session expired. Please sign in again to continue."
+   17:       unauthenticated: "You need to sign in or sign up before continuing."
+   18        unconfirmed: "You have to confirm your account before continuing."
+   19      mailer:
+
+6 matches across 5 files
+
+
+Searching 160 files for "sign in"
+
+C:\Sites\haushaltsbuch\app\views\devise\mailer\unlock_instructions.html.erb:
+    1  <p>Hello <%= @resource.email %>!</p>
+    2  
+    3: <p>Your account has been locked due to an excessive number of unsuccessful sign in attempts.</p>
+    4  
+    5  <p>Click the link below to unlock your account:</p>
+
+C:\Sites\haushaltsbuch\app\views\devise\sessions\new.html.erb:
+    1: <h2>Sign in</h2>
+    2  
+    3  <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+    .
+   12    <% end -%>
+   13  
+   14:   <div><%= f.submit "Sign in" %></div>
+   15  <% end %>
+   16  
+
+C:\Sites\haushaltsbuch\app\views\devise\shared\_links.erb:
+    1  <%- if controller_name != 'sessions' %>
+    2:   <%= link_to "Sign in", new_session_path(resource_name) %><br />
+    3  <% end -%>
+    4  
+    .
+   21  <%- if devise_mapping.omniauthable? %>
+   22    <%- resource_class.omniauth_providers.each do |provider| %>
+   23:     <%= link_to "Sign in with #{provider.to_s.titleize}", omniauth_authorize_path(resource_name, provider) %><br />
+   24    <% end -%>
+   25  <% end -%>
+
+C:\Sites\haushaltsbuch\config\initializers\devise.rb:
+   82    # By default, Devise cleans up the CSRF token on authentication to
+   83    # avoid CSRF token fixation attacks. This means that, when using AJAX
+   84:   # requests for sign in and sign up, you need to get a new CSRF token
+   85    # from the server. You can disable this option at your own risk.
+   86    # config.clean_up_csrf_token_on_authentication = true
+   ..
+  153    # ==> Configuration for :lockable
+  154    # Defines which strategy will be used to lock an account.
+  155:   # :failed_attempts = Locks an account after a number of failed attempts to sign in.
+  156    # :none            = No lock strategy. You should handle locking by yourself.
+  157    # config.lock_strategy = :failed_attempts
+  ...
+  213    # ==> Navigation configuration
+  214    # Lists the formats that should be treated as navigational. Formats like
+  215:   # :html, should redirect to the sign in page when the user does not have
+  216    # access, but formats like :xml or :json, should return 401.
+  217    #
+
+C:\Sites\haushaltsbuch\config\locales\devise.en.yml:
+   14        last_attempt: "You have one more attempt before your account will be locked."
+   15        not_found_in_database: "Invalid email or password."
+   16:       timeout: "Your session expired. Please sign in again to continue."
+   17:       unauthenticated: "You need to sign in or sign up before continuing."
+   18        unconfirmed: "You have to confirm your account before continuing."
+   19      mailer:
+   ..
+   47        send_instructions: "You will receive an email with instructions about how to unlock your account in a few minutes."
+   48        send_paranoid_instructions: "If your account exists, you will receive an email with instructions about how to unlock it in a few minutes."
+   49:       unlocked: "Your account has been unlocked successfully. Please sign in to continue."
+   50    errors:
+   51      messages:
+
+11 matches across 5 files
+
+
+Searching 160 files for "login"
+
+C:\Sites\haushaltsbuch\app\views\layouts\_navigation.html.erb:
+   18  <% else %>
+   19  
+   20:   <li><%= link_to 'Sign in', new_user_session_path %></li>
+   21  
+   22    <li><%= link_to 'Sign up', new_user_registration_path %></li>
+
+C:\Sites\haushaltsbuch\config\initializers\devise.rb:
+  162    # Defines which strategy will be used to unlock an account.
+  163    # :email = Sends an unlock link to the user email
+  164:   # :time  = Re-enables login after a certain amount of time (see :unlock_in below)
+  165    # :both  = Enables both strategies
+  166    # :none  = No unlock strategy. You should handle unlocking by yourself.
+
+2 matches across 2 files

@@ -1,6 +1,15 @@
 require 'test_helper'
 
+
 class TransactionsControllerTest < ActionController::TestCase
+
+
+  test "should get welcome" do
+    get :welcome
+    assert_response :success
+  end
+
+
   setup do
     @transaction = transactions(:one)
   end
