@@ -1,0 +1,38 @@
+<div class="full_block gap_reset second_cont_h">
+
+<div class="row sumos_padd_top">
+
+<div class="column grid_165px">
+	<div class="info_box_number">
+		<strong>Einnahmen</strong> 
+		<var class="color3"> <%= pluralize(@income.sum("amount"), "")  %> </var> 
+		<em></em>
+	</div>			
+</div>
+
+<div class="column grid_165px">	
+	<div class="info_box_number">
+		<strong>Ausgaben</strong> 
+		<var class="color2"><%= pluralize(@expense.sum("amount"), "") %></var> 
+		<em></em>
+	</div>	
+</div>	
+
+<div class="column grid_165px">
+	<div class="info_box_number">
+		<strong>Balance</strong> 
+		<var class="color1"><%= (@income.sum("amount")- @expense.sum("amount"))  %> </var> 
+		<em></em>
+	</div>	
+</div>
+
+	<div class="column grid_165px">
+		<div class="info_box_number my_wallet">
+		<strong>  </strong> 
+				<var></var>
+				<em>&nbsp;</em>
+		</div>
+	</div>
+
+</div>
+</div>
