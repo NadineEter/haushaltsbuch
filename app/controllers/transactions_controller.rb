@@ -2,22 +2,20 @@ class TransactionsController < ApplicationController
 
   before_action :authenticate_user!
   before_action :set_transaction, only: [:show, :edit, :update, :destroy]
-
-
-  # GET /transactions
-  # GET /transactions.json
-
-  def welcome
-  end
-
-
   # GET /transactions
   # GET /transactions.json
   def index
-      @expense = Transaction.where(income: false).order(date: :desc)
-      @income = Transaction.where(income: true).order(date: :desc)
+      if (params[:month] && params[:year])
+        
+        @expense = Transaction.where(income: false).where("strftime('%Y', date) = ? and strftime('%m', date) = ?", params[:year], params[:month]).order(date: :desc) 
+        @income = Transaction.where(income: true).where("strftime('%Y', date) = ? and strftime('%m', date) = ?", params[:year], params[:month]).order(date: :desc)
+    
+       
+      else
+        @expense = Transaction.where(income: false).order(date: :desc)
+        @income = Transaction.where(income: true).order(date: :desc)
+      end 
   end
-
   # GET /transactions/1
   # GET /transactions/1.json
 
@@ -26,7 +24,6 @@ class TransactionsController < ApplicationController
   end
 
   # GET /transactions/new
-
   #Displai a form to create a new post.
   def new
     @transaction = Transaction.new
@@ -68,6 +65,7 @@ class TransactionsController < ApplicationController
       end
     end
   end
+
   # DELETE /transactions/1
   # DELETE /transactions/1.json
   #distroy a post
@@ -85,13 +83,13 @@ class TransactionsController < ApplicationController
       @transaction = Transaction.find(params[:id])
       if @transaction.user_id != current_user.id
   redirect_to transactions_url, alert: 'You can edit only your own Transaction.'
-end
-    end
+      end
+  end
 
     # Never trust parameters from the scary internet, only allow the white list through.
-    def transaction_params
+  def transaction_params
       params.require(:transaction).permit(:amount, :date, :comment, :account_id, :income, :category_id)
-    end
+  end
 end
 
 

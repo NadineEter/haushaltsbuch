@@ -1,4 +1,4 @@
-<%= form_for(@transaction) do |f| %>
+<%= form_for(@transaction, :html => { :role => "form"}) do |f| %>
   <% if @transaction.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@transaction.errors.count, "error") %> prohibited this transaction from being saved:</h2>
@@ -11,36 +11,45 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :amount %><br>
-    <%= f.text_field :amount %>
+    <%= f.text_field :amount, class: "form-control" %>
   </div>
-  <div class="field">
+  <br>
+  <div class="form-group">
     <%= f.label :date %><br>
-    <%= f.text_field :date, :class => "task_date" %>
+    <%= f.text_field :date,  class: "form-control" %>
   </div>
-  <div class="field">
+  <br>
+  <div class="form-group">
     <%= f.label :comment %><br>
-    <%= f.text_field :comment %>
+    <%= f.text_field :comment, class: "form-control" %>
   </div>
-  <div class="field">
+  <br>
+  <div class="form-group">
     <%= f.label :account_id %><br>
-    <%= f.number_field :account_id %>
+     <%= f.select :account_id, Account.all.collect {|a| [ a.name, a.id ] }, { :include_blank => true, :selected => @transaction.account_id}, class: "form-control" %>
   </div>
-  <div class="field">
+  <br>
+  <div class="form-group">
     <%= f.label :income %><br>
-    <%= f.check_box :income %>
+    <%= f.check_box :income, class: "form-control" %>
   </div>
-    <div class="field">
+  <br>
+    <div class="form-group">
     <%= f.label :expense %><br>
-    <%= f.check_box :expense %>
+    <%= f.check_box :expense, class: "form-control" %>
   </div>
-  <div class="field">
-    <%= f.label :category_id %><br>
-    <%= f.number_field :category_id %>
-  </div>
+  <br>  
+  <div class="form-group">
+  <%= f.label :category_id %><br>
+  <%= f.select :category_id, Category.all.collect {|c| [ c.name, c.id ] }, { :include_blank => true, :selected => @transaction.category_id}, class: "form-control" %>
+  </div> 
+<br>  
+
+
+  <br>
   <div class="actions">
-    <%= f.submit %>
-    
+    <%= f.submit %>  
   </div>
 <% end %>

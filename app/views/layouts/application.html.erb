@@ -6,8 +6,6 @@
   <!--  für mobile Geräte ein Viewport vor dem Title tag-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Haushaltsbuch</title>
-<link href="css/bootstrap.min.css" rel="stylesheet">
-
   
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
@@ -15,11 +13,6 @@
  
 
 </head>
-
-  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://code.jquery.com/jquery.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
 
 
 <body> 
@@ -34,6 +27,9 @@
 
   
       <%= render 'layouts/messages' %>
+
+
+      
         <%= yield %>
 
 

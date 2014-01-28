@@ -4,7 +4,7 @@ Haushaltsbuch::Application.routes.draw do
 resources :transactions
 root :to =>"transactions#index"
 
-  get "transactions/welcome"
+  
   get "transactions/edit"
   get "transactions/index"
   get "transactions/show"
