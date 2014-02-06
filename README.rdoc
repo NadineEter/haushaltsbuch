@@ -9,6 +9,7 @@ Nadine Eter: 327000
 
 Link zur Heroku-Demo (falls vorhanden):
 
+http://haushaltsbuch-nn.herokuapp.com
 
 Ausführliche Beschreibung:
 
