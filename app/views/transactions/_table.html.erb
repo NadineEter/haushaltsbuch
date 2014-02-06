@@ -15,15 +15,15 @@
 
 
   <tbody>
-<!-- isduoda irasytus duomenis ir lenteles remai. duomenis iraso i lentele-->
+<!-- Tabelle Body -->
  <% transactions.each do |transaction| %>
 
       <tr>
         <td><%= transaction.amount %></td>  
         <td><%= transaction.date %></td>
         <td><%= transaction.comment %></td>     
-        <td><%= transaction.account.name if transaction.account %></td>
-        <td><%= transaction.category.name if transaction.category %></td>
+        <td><%= transaction.account.name if transaction.category %></td>
+        <td><%= transaction.category.name if transaction.account %></td>
 
         <td><%= link_to 'Edit', edit_transaction_path(transaction), class: "btn btn-warning" %></td>
         <td><%= link_to 'Destroy', transaction, class: "btn btn-danger btn-sm", method: :delete, data: { confirm: 'Are you sure?' } %></td>

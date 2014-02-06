@@ -1,28 +1,28 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+Projekt-Name: "Haushaltsbuch"
 
-* Ruby version
+Vor- und Nachnamen und Matrikel-Nummern der Team-Mitglieder:
+Natalija Petrova: 336981
+Nadine Eter: 327000
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Link zur Heroku-Demo (falls vorhanden):
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Ausführliche Beschreibung:
+
+Beschreibung des Projekts: Erstellung eines Haushaltsbuches mit dem man Ausgaben und Einnahmen eintragen und zusammenrechnen kann. Ausserdem wird der Kontostand angezeigt und es wird nach Jahr und Monat gefiltert. Des weiteren werden die Ausgaben und Einnahmen getrennt nach Datum in einer Tabelle sortiert.
+
+
+Beschreibung der technischen Umsetzung:
+
+- Für Formulare und Buttons Nutzung von Bootstrap
+
+- Integration von vier Tabellen in die Datenbank
+
+- Einfügen eines Datepickers
+
+- Sortier und Filterfunktion nach Datum 
+
+- Einfügen von Funktionen die alle Einahmen und Ausgaben summieren und deren Differenz ausrechnet 

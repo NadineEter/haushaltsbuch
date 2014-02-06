@@ -4,3 +4,6 @@ class AddUserIdToTransactions < ActiveRecord::Migration
     add_index :transactions, :user_id
   end
 end
+
+
+

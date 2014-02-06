@@ -3,18 +3,17 @@ require 'test_helper'
 
 class TransactionsControllerTest < ActionController::TestCase
 
-
-  test "should get welcome" do
-    get :welcome
-    assert_response :success
-  end
-
+include Devise::TestHelpers
+ 
+ 
 
   setup do
+    @user = users(:one)
     @transaction = transactions(:one)
   end
 
   test "should get index" do
+    sign_in @user
     get :index
     assert_response :success
     assert_not_nil assigns(:transactions)
@@ -37,6 +36,9 @@ class TransactionsControllerTest < ActionController::TestCase
     get :show, id: @transaction
     assert_response :success
   end
+
+  
+  
 
   test "should get edit" do
     get :edit, id: @transaction

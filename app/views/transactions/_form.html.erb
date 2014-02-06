@@ -27,7 +27,7 @@
   </div>
   <br>
   <div class="form-group">
-    <%= f.label :account_id %><br>
+    <%= f.label :Category %><br>
      <%= f.select :account_id, Account.all.collect {|a| [ a.name, a.id ] }, { :include_blank => true, :selected => @transaction.account_id}, class: "form-control" %>
   </div>
   <br>
@@ -42,7 +42,7 @@
   </div>
   <br>  
   <div class="form-group">
-  <%= f.label :category_id %><br>
+  <%= f.label :Account %><br>
   <%= f.select :category_id, Category.all.collect {|c| [ c.name, c.id ] }, { :include_blank => true, :selected => @transaction.category_id}, class: "form-control" %>
   </div> 
 <br>  

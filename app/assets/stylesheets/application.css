@@ -35,9 +35,19 @@ padding: 0;
 }
 
 /* render html5 elements as block */
-header, footer, section, aside, nav, article {
+header, section, aside, nav, article {
 display: block;
 }
+footer{
+width: 940px;
+	background-color:  #3B3B38;
+	border: 0px;
+	color: white;
+	height: 30px;
+	padding-top: 6px;
+	padding-left: 6px;
+}
+
 
 body {
 line-height: 1;
@@ -140,14 +150,6 @@ overflow: hidden;
 }
 
 
-footer {
-width: 940px;
-margin: 0 auto;
-clear: both;
-border: 3px solid #888;
-
-}
-
 /** BALANCE TABLE */
 
 .second_cont_h {
@@ -235,33 +237,6 @@ color: #d03a11;
 color: #fa9300;
 }
 
-.my_wallet  {
-	background-color: #99cc00;
-color: #fff;
--moz-border-radius: 15px 15px 15px 15px;
-width: 150px;
-padding-top: 5px;
-padding-right: 0px;
-padding-bottom: 7px;
-padding-left: 0px;
-margin-top: 4px;
-margin-right: 0pt;
-margin-bottom: 15px;
-margin-left: 0pt;
-text-align: center;
-border: 1px solid #DEDEDE;
-background-image: none;
-background-repeat: repeat;
-background-attachment: scroll;
-background-position: 0% 0%;
-color: #222222;
-margin-top: 12px;
-margin-right: 5px;
-margin-bottom: 15px;
-margin-left: 0px;
-background-color: #99cc00;
-
-}
 
 
 

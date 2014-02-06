@@ -7,4 +7,6 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 Category.create([{ name: 'Cash' }, { name: 'Bank Account' }])
-Account.create([{ name: 'Lebensmittel'}, { name: 'Sonstiges' }])
+Account.create([{ name: 'Lebensmittel'}, { name: 'Sonstiges'}, 
+	{ name: 'Miete'}, { name: 'Strom'}, { name: 'Telefongebühren'},
+	{ name: 'Kleidung'}, { name: 'Freizeit' }, { name: 'Pflegeprodukte'}])
